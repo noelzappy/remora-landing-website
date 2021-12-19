@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import phoneImage from "../assets/Group 712.png";
+import phoneImage from "../assets/group/phone.png";
 
 export default function Home() {
   return (
-    <div className="h-full sm:grid sm:grid-cols-2 justify-between  px-6  sm:px-24">
-      <div>
-        <p className="font-extrabold text-5xl sm:text-7xl leading-snug">
+    <div className="h-full sm:grid sm:grid-cols-2 justify-between align-middle w-full px-6 mt-0 pt-0  lg:mt-50 sm:pl-24">
+      <div className="lg:mt-32">
+        <p className="font-extrabold text-5xl lg:text-7xl leading-snug">
           A New <br />
           Banking <br />
           Experience.
         </p>
-        <div className="grid grid-cols-2 gap-1 bg-white rounded-3xl p-2  mt-8 w-80 sm:w-96">
+        <div className="grid grid-cols-2 gap-1 bg-white rounded-3xl p-2  mt-8 w-80 lg:w-96">
           <div>
             <Link
               to="/about"
@@ -31,7 +31,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div>{/* <img src={phoneImage} /> */}</div>
+      <div className="flex sm:place-content-end">
+        <img alt="Remora app" className="w-auto lg:h-5/6" src={phoneImage} />
+      </div>
     </div>
   );
 }
